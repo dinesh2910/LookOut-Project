@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="D2o-3J-QOi">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="FTj-yx-rwx">
+            <objects>
+                <navigationController id="D2o-3J-QOi" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="yO8-Fh-Wh8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xoV-3t-AsF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5TF-86-Jeu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1358" y="124"/>
+        </scene>
+        <!--Email Address Leaked-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y5O-i2-xER">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="QjD-Fz-B2h"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="NYM-4z-vaz"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ofv-lK-a7j">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMm-BY-I4a" customClass="RoundedRectButton">
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Mark as resolved">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resolvedButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0QZ-iq-67o"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIw-dq-gOR" customClass="RoundedRectButton">
+                                        <color key="backgroundColor" red="0.2048921585" green="0.65221673250000001" blue="0.22297468779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="A0g-5W-ZQp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Remind me later">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="reminderButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D1I-2h-4AW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="bIw-dq-gOR" firstAttribute="leading" secondItem="Ofv-lK-a7j" secondAttribute="leading" constant="8" id="4Sx-wY-d11"/>
+                                    <constraint firstItem="bIw-dq-gOR" firstAttribute="top" secondItem="Ofv-lK-a7j" secondAttribute="top" constant="4" id="A6A-fM-J4U"/>
+                                    <constraint firstAttribute="bottom" secondItem="bIw-dq-gOR" secondAttribute="bottom" constant="4" id="Anm-bm-reE"/>
+                                    <constraint firstItem="JMm-BY-I4a" firstAttribute="width" secondItem="bIw-dq-gOR" secondAttribute="width" id="FRR-Nb-igV"/>
+                                    <constraint firstItem="JMm-BY-I4a" firstAttribute="centerY" secondItem="Ofv-lK-a7j" secondAttribute="centerY" id="QZd-nI-JY6"/>
+                                    <constraint firstAttribute="height" constant="44" id="ZLd-WJ-MWl"/>
+                                    <constraint firstItem="bIw-dq-gOR" firstAttribute="centerY" secondItem="Ofv-lK-a7j" secondAttribute="centerY" id="ZlR-4m-pco"/>
+                                    <constraint firstItem="JMm-BY-I4a" firstAttribute="height" secondItem="bIw-dq-gOR" secondAttribute="height" id="mmt-rC-WzY"/>
+                                    <constraint firstAttribute="trailing" secondItem="JMm-BY-I4a" secondAttribute="trailing" constant="8" id="nSV-yL-0vz"/>
+                                    <constraint firstItem="JMm-BY-I4a" firstAttribute="leading" secondItem="bIw-dq-gOR" secondAttribute="trailing" constant="10" id="qLb-6n-JGg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ofv-lK-a7j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0s4-Xa-Xd9"/>
+                            <constraint firstAttribute="trailing" secondItem="y5O-i2-xER" secondAttribute="trailing" id="dAI-kD-vZb"/>
+                            <constraint firstItem="y5O-i2-xER" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eod-CG-Pu6"/>
+                            <constraint firstItem="y5O-i2-xER" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="iAL-WQ-Dlo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y5O-i2-xER" secondAttribute="bottom" constant="44" id="lcv-w7-2u0"/>
+                            <constraint firstItem="Ofv-lK-a7j" firstAttribute="top" secondItem="y5O-i2-xER" secondAttribute="bottom" constant="-3" id="noF-dU-b8Z"/>
+                            <constraint firstAttribute="trailing" secondItem="Ofv-lK-a7j" secondAttribute="trailing" id="vac-4s-8He"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Email Address Leaked" id="Gjh-Vp-5c3"/>
+                    <connections>
+                        <outlet property="backTableView" destination="y5O-i2-xER" id="DPs-bU-gmT"/>
+                        <outlet property="remindMeLaterButton" destination="bIw-dq-gOR" id="wbJ-ob-QCa"/>
+                        <outlet property="resolvedButton" destination="JMm-BY-I4a" id="JGw-hv-XC6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-578.39999999999998" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,12 @@
+{
+    "events": [
+        {
+            "data": {
+                "[key]": "[value]"
+            },
+            "date": "[date when the data was found in the format YYYY-MM-DD]"
+        }
+    ],
+    "id": "[some unique identifier]",
+    "type": "[integer enum: 1=CyberAgent, 2=SSNTrace, 3=SocialMedia]"
+}

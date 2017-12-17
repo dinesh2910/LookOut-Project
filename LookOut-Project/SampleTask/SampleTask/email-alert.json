@@ -1,0 +1,15 @@
+{
+    "events": [
+        {
+            "data": {
+                "CreationDate": "2016-09-06 00:00:00",
+                "Source": "Test Data",
+                "email": "mateagar+1@gmail.com",
+                "match": "IDEMAILADDR"
+            },
+            "date": "2016-09-12"
+        }
+    ],
+    "id": "4930982:105",
+    "type": 1
+}
